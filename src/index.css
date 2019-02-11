@@ -1,0 +1,34 @@
+#logo {
+    position:relative;
+}
+#logo > div {
+    background-size:100% 100%;
+    position:absolute;
+}
+#logo .outline {
+    background-image:url('img/outline.png');
+    width:calc(1795px * .15);
+    height:calc(1361px * .15);
+}
+#logo .wheeloutline {
+    background-image:url('img/wheeloutline.png');
+    width:calc(1690px * .15);
+    height:calc(1234px * .15);
+    top:calc(40px * .15);
+    left:calc(50px * .15);
+}
+#logo .wheel {
+    background-image:url('img/wheel.png');
+    width:calc(744px * .15);
+    height:calc(741px * .15);
+    top:calc(57px * .15);
+    left:calc(980px * .15);
+    animation:5s spin infinite linear;
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    } to {
+        transform:rotate(360deg);
+    }
+}
