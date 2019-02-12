@@ -1,34 +1,132 @@
+@font-face {
+  font-family: montserrat;
+  src: url(index.ttf);
+}
+
+body {
+    font-family:montserrat;
+    background-color: #0d3a5a;
+}
+
 #logo {
-    position:relative;
+    top:50px;
+    left:calc(50% - 180px);
+    position: absolute;
+    width: 1795px;
+    height: 1361px;
+    margin: auto;
+    transform: scale(.2);
+    transform-origin:top left;
 }
+
 #logo > div {
-    background-size:100% 100%;
-    position:absolute;
+    background-size: 100% 100%;
+    position: absolute;
 }
+
 #logo .outline {
-    background-image:url('img/outline.png');
-    width:calc(1795px * .15);
-    height:calc(1361px * .15);
+    background-image: url('img/outline.png');
+    width: 1795px;
+    height: 1361px;
 }
+
 #logo .wheeloutline {
-    background-image:url('img/wheeloutline.png');
-    width:calc(1690px * .15);
-    height:calc(1234px * .15);
-    top:calc(40px * .15);
-    left:calc(50px * .15);
+    background-image: url('img/wheeloutline.png');
+    width: 1690px;
+    height: 1234px;
+    top: 40px;
+    left: 50px;
 }
+
 #logo .wheel {
-    background-image:url('img/wheel.png');
-    width:calc(744px * .15);
-    height:calc(741px * .15);
-    top:calc(57px * .15);
-    left:calc(980px * .15);
-    animation:5s spin infinite linear;
+    background-image: url('img/wheel.png');
+    width: 744px;
+    height: 741px;
+    top: 57px;
+    left: 980px;
+    animation: 5s spin infinite linear;
 }
+
+#logo .suite {
+    background-image: url('img/suite.png');
+    width: 1099px;
+    height: 574px;
+    top: 745px;
+    left: 270px;
+}
+
+#logo .super {
+    background-image: url('img/super.png');
+    width: 1363px;
+    height: 760px;
+    top: 200px;
+    left: 140px;
+}
+
+#logo .bonbon {
+    background-image: url('img/bonbon.png');
+    width: 348px;
+    height: 204px;
+    top: 205px;
+    left: 615px;
+    animation: shimmy 1s infinite ease-in-out;
+    animation-delay: .3s;
+}
+
+#logo .bonbon2 {
+    background-image: url('img/bonbon2.png');
+    width: 460px;
+    height: 300px;
+    top: 825px;
+    left: 1300px;
+    animation: shimmy 1s infinite ease-in-out;
+    animation-delay: .6s;
+}
+
+#logo .pop {
+    background-image: url('img/pop.png');
+    width: 199px;
+    height: 415px;
+    top: 857px;
+    left: 33px;
+    animation: shimmy 1s infinite ease-in-out;
+}
+
+@keyframes shimmy {
+    0% {
+        transform: rotate(-3deg);
+    }
+
+    50% {
+        transform: rotate(3deg);
+    }
+
+    100% {
+        transform: rotate(-3deg);
+    }
+}
+
 @keyframes spin {
     from {
-        transform:rotate(0deg);
-    } to {
-        transform:rotate(360deg);
+        transform: rotate(0deg);
     }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#projects {
+    margin-top:500px;
+    text-align:center;
+}
+#projects .project {
+    margin:30px;
+    display:inline-block;
+    width:300px;
+    height:250px;
+    background-color:#125a8e;
+}
+#projects .project .title {
+    font-size:20px;
 }
