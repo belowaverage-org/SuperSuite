@@ -1,15 +1,20 @@
 @font-face {
-  font-family: montserrat;
+  font-family: index;
   src: url(index.ttf);
+}
+@font-face {
+  font-family: index2;
+  src: url(index2.ttf);
 }
 
 body {
-    font-family:montserrat;
+    font-family:index;
     background-color: #0d3a5a;
+    text-align:center;
 }
 
 #logo {
-    top:50px;
+    top:40px;
     left:calc(50% - 180px);
     position: absolute;
     width: 1795px;
@@ -108,19 +113,26 @@ body {
 
 @keyframes spin {
     from {
-        transform: rotate(0deg);
+        transform: rotate(360deg);
     }
 
     to {
-        transform: rotate(360deg);
+        transform: rotate(0deg);
     }
 }
-
+h1 {
+    font-family:index2;
+    color:#24a5ff;
+    font-weight:lighter;
+    font-size:50px;
+    text-shadow:2px 2px 0px rgba(0, 0, 0, 0.5);
+}
 #projects {
-    margin-top:500px;
+    margin-top:370px;
     text-align:center;
 }
 #projects .project {
+    vertical-align:top;
     margin:30px;
     display:inline-block;
     width:300px;
@@ -128,5 +140,19 @@ body {
     background-color:#125a8e;
 }
 #projects .project .title {
-    font-size:20px;
+    font-size:25px;
+    margin-top:20px;
+    color:white;
+    text-shadow:2px 2px 0px rgba(0, 0, 0, 0.62);
+}
+#projects .project .logo {
+    width:50px;
+    height:50px;
+    background-size:100% 100%;
+    margin:20px auto 20px auto;
+}
+#projects .project .desc {
+    color:#fcd936;
+    margin:30px auto 20px auto;
+    text-shadow:1px 2px 0px rgba(0, 0, 0, 0.62);
 }
