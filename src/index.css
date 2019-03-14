@@ -136,12 +136,13 @@ h1 {
 }
 
 #projects .project {
+    
     vertical-align: top;
     margin: 30px;
     display: inline-block;
     width: 420px;
     height: 380px;
-    background-color: #125a8e;
+    background-color: #1068a2;
     position: relative;
     border-radius: 50px;
 }
