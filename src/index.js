@@ -80,8 +80,8 @@ pop.height = 100;
 
 function startInterval() {
     setInterval(function() {
-        new RainDrop(bonbon, .5, Math.round(Math.random() * canvas.width), -100);
-        new RainDrop(bonbon2, .5, Math.round(Math.random() * canvas.width), -100);
-        new RainDrop(pop, .5, Math.round(Math.random() * canvas.width), -100);
+        new RainDrop(bonbon, .5, Math.round(Math.random() * (canvas.width + 200)) - 100, -100);
+        new RainDrop(bonbon2, .5, Math.round(Math.random() * (canvas.width + 200)) - 100, -100);
+        new RainDrop(pop, .5, Math.round(Math.random() * (canvas.width + 200)) - 100, -100);
     }, 300);
 }
