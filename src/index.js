@@ -24,17 +24,13 @@ function paint() {
         rainDrop.updateLocation();
     });
     RainDrops.forEach(function(rainDrop) {
+
         ctx.drawImage(rainDrop.image, rainDrop.x, rainDrop.y, rainDrop.image.width, rainDrop.image.height);
     });
     window.requestAnimationFrame(paint);
 }
 class RainDrop {
-    x = 0;
-    y = 0;
-    speed = 0;
-    lastUpdated = 0;
-    image = null;
-    constructor(image, speed, x = 0, y = 0) {
+    constructor(image, speed, x, y) {
         this.x = x;
         this.y = y;
         this.speed = speed;
@@ -63,6 +59,8 @@ class RainDrop {
     }
 }
 
+
+
 var bonbon = new Image();
 bonbon.src = './src/img/bonbon.png';
 bonbon.width = 100;
@@ -78,10 +76,15 @@ pop.src = './src/img/pop.png';
 pop.width = 50;
 pop.height = 100;
 
+var candy = [
+    bonbon,
+    bonbon2,
+    pop
+];
+
 function startInterval() {
     setInterval(function() {
-        new RainDrop(bonbon, .5, Math.round(Math.random() * (canvas.width + 200)) - 100, -100);
-        new RainDrop(bonbon2, .5, Math.round(Math.random() * (canvas.width + 200)) - 100, -100);
-        new RainDrop(pop, .5, Math.round(Math.random() * (canvas.width + 200)) - 100, -100);
-    }, 300);
+        var candyIndex = Math.floor(Math.random() * 3);
+        new RainDrop(candy[candyIndex], ((Math.random() * 2) + 3) / 16, Math.round(Math.random() * (canvas.width + 200)) - 100, -100);
+    }, 200);
 }
