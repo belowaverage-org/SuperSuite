@@ -1,14 +1,12 @@
 var ctx = null;
 var canvas = null;
 var RainDrops = [];
-onload = function() {
+addEventListener("load", function() {
     canvas = document.getElementsByTagName('canvas')[0];
     ctx = canvas.getContext('2d');
     initialize();
-};
-onresize = function() {
-    updateResolution();
-};
+});
+addEventListener("resize", updateResolution);
 function initialize() {
     updateResolution();
     window.requestAnimationFrame(paint);
@@ -58,30 +56,23 @@ class RainDrop {
         });
     }
 }
-
-
-
 var bonbon = new Image();
 bonbon.src = './src/img/bonbon.png';
 bonbon.width = 100;
 bonbon.height = 60;
-
 var bonbon2 = new Image();
 bonbon2.src = './src/img/bonbon2.png';
 bonbon2.width = 100;
 bonbon2.height = 60;
-
 var pop = new Image();
 pop.src = './src/img/pop.png';
 pop.width = 50;
 pop.height = 100;
-
 var candy = [
     bonbon,
     bonbon2,
     pop
 ];
-
 function startInterval() {
     setInterval(function() {
         var candyIndex = Math.floor(Math.random() * 3);
